@@ -1,0 +1,49 @@
+#include<stdio.h>
+struct student{
+    char name[50];
+    char usn[15];
+    char marks[3];
+    int total;
+    float average;
+    char branch[50];
+    float percentage;
+    
+};
+int main(){
+    struct student student;
+    printf("enter students name:");
+    scanf("%s",student.name);
+        printf("enter students usn:");
+            scanf("%s",student.usn);
+                    printf("enter students branch:");
+            scanf("%s",student.branch);
+            student.total=0;
+            for(int i=0;i<3;i++)
+            {
+                printf("enter marks for subject %d:",i+1);
+                scanf("%d",&student.marks[i]);
+                student.total+=student.marks[i];
+                
+            }
+            student.average=student.total/3;
+            student.percentage=(float)student.total/300*100;
+            printf("\nstudent details:\n");
+            printf("name:%s\n",student.name);
+             printf("usn:%s\n",student.usn);
+              printf("branch:%s\n",student.branch);
+               printf("total marks:%d\n",student.total);
+                printf("percentage:%.2f\n",student.percentage);
+                 printf("average marks:%.2f\n",student.average);
+                 if(student.average>=40){
+                     printf("result:passed\n");
+                     
+                 }
+                 else{
+                     printf("result:failed\n");
+                 }
+                 return 0;
+           
+
+
+
+}

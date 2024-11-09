@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+    int x=10,y=20,*pointer1,*pointer2;
+    pointer1=&x;
+    pointer2=pointer1;
+    printf("pointer1 is %d,pointer2 is %d,%d",*pointer1,*pointer2,x);
+}
